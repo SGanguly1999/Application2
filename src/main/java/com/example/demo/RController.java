@@ -19,10 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RController {
 	
-	@GetMapping("")
+	@GetMapping("/")
 	public void web1(HttpServletRequest req,HttpServletResponse response) throws IOException, ServletException
 	{
-		RequestDispatcher rd=req.getRequestDispatcher("/view1");
+		RequestDispatcher rd=req.getRequestDispatcher("view1");
 	 	 rd.forward(req,response);
 	}
 

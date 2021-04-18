@@ -9,6 +9,7 @@ public class Controller1 {
 	@RequestMapping("/view1")
 	public String web()
 	{
-	 	return "Form.html";
+		System.out.println("Hello");
+	 	return "Form";
 	}
 }

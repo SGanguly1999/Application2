@@ -20,8 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class RController {
 	
 	@GetMapping("")
-	public String get() {
-		return "Hi";
+	public void web1(HttpServletRequest req,HttpServletResponse response) throws IOException, ServletException
+	{
+		RequestDispatcher rd=req.getRequestDispatcher("/view1");
+	 	 rd.forward(req,response);
 	}
 
 	@PostMapping("add")
